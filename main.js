@@ -46,7 +46,7 @@ function themeToggle() {
 
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText", {
-  strings: ["Full-Stack-developer", "DataBase-developer", "Freelancer", "DevOps-developer"],
+  strings: ["FullStack-developer", "DataBase-developer", "Freelancer", "DevOps-developer"],
   loop: true,
   typeSpeed: 100,
   backSpeed: 80,
