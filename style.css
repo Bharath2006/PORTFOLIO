@@ -265,8 +265,8 @@ nav {
 .typedText {
     text-transform: capitalize;
     color: var(--text-color-third);
-    font-size: 28px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 300;
 }
 
 .featured-text-info {
