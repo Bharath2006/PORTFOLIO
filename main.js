@@ -10,22 +10,35 @@ function myMenuFunction() {
 }
 
 /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
-window.onscroll = function () { headerShadow() };
+window.onscroll = function () { headerShadow(), themeToggle() };
 
 function headerShadow() {
   const navHeader = document.getElementById("header");
-
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
 
     navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
-    navHeader.style.height = "70px";
-    navHeader.style.lineHeight = "70px";
+    navHeader.style.height = "60px";
+    navHeader.style.lineHeight = "60px";
 
   } else {
 
     navHeader.style.boxShadow = "none";
-    navHeader.style.height = "90px";
-    navHeader.style.lineHeight = "90px";
+    navHeader.style.height = "80px";
+    navHeader.style.lineHeight = "80px";
+
+
+  }
+}
+function themeToggle() {
+  const themeToggle = document.getElementById("themeToggle");
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    themeToggle.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
+    themeToggle.style.height = "60px";
+    themeToggle.style.lineHeight = "60px";
+  } else {
+    themeToggle.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
+    themeToggle.style.height = "60px";
+    themeToggle.style.lineHeight = "60px";
 
   }
 }
@@ -33,7 +46,7 @@ function headerShadow() {
 
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText", {
-  strings: ["Full-Stack-developer", "DataBase-Engineear", "Freelancer"],
+  strings: ["Full-Stack-developer", "DataBase-developer", "Freelancer", "DevOps-developer"],
   loop: true,
   typeSpeed: 100,
   backSpeed: 80,
@@ -42,9 +55,9 @@ var typingEffect = new Typed(".typedText", {
 var typingEffect = new Typed(".nametext", {
   strings: ["Bharath S"],
   loop: true,
-  typeSpeed: 150,
-  backSpeed: 120,
-  backDelay: 4000
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 3500
 })
 
 
@@ -123,7 +136,10 @@ function scrollActive() {
 
 function toggleMode() {
   const body = document.body;
+  const footer = document.querySelector('top-footer');
+
   body.classList.toggle('dark-mode');
+  footer.classList.toggle('dark-mode');
   const isDarkMode = body.classList.contains('dark-mode');
   localStorage.setItem('darkMode', isDarkMode);
 }
@@ -132,25 +148,34 @@ function toggleMode() {
 document.addEventListener('DOMContentLoaded', function () {
   const isDarkMode = localStorage.getItem('darkMode') === 'true';
   const body = document.body;
+  const footer = document.querySelector('top-footer');
+
   if (isDarkMode) {
     body.classList.add('dark-mode');
+    footer.classList.add('dark-mode');
   } else {
     body.classList.remove('dark-mode');
+    footer.classList.remove('dark-mode');
+
   }
 });
 // JavaScript
 function toggleTheme() {
   const body = document.body;
   const themeIcon = document.getElementById('themeIcon');
+  const footer = document.querySelector('top-footer');
 
   if (body.classList.contains('dark-theme')) {
     body.classList.remove('dark-theme');
+    footer.classList.remove('dark-theme');
     themeIcon.classList.remove('uil-moon');
     themeIcon.classList.add('uil-sun');
   } else {
     body.classList.add('dark-theme');
     themeIcon.classList.remove('uil-sun');
     themeIcon.classList.add('uil-moon');
+    footer.classList.add('dark-theme');
+
   }
 }
 
