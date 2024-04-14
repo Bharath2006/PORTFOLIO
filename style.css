@@ -50,9 +50,21 @@
     /* Increase font size for the icon */
     color: blue;
     /* Set color for the icon */
+
     padding: 10px;
+
     /* Add padding to increase clickable area */
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /* Make button circular */
+    width: 80px;
+    /* Set button width */
+    height: 80px;
+    /* Set button height */
+
 }
+
 
 
 .icon-btn:hover {
