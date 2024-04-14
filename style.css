@@ -265,6 +265,8 @@ nav {
 .typedText {
     text-transform: capitalize;
     color: var(--text-color-third);
+    font-size: 28px;
+    font-weight: 600;
 }
 
 .featured-text-info {
@@ -366,7 +368,7 @@ nav {
     padding-block: 5em;
 }
 
-.row {
+.typedText .row {
     display: flex;
     justify-content: space-between;
     width: 100%;
